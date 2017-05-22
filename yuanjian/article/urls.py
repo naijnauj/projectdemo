@@ -12,13 +12,13 @@ Class-based views
 Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
-from django.contrib import admin
+from django.conf.urls import  url
+from .views import article_list
 
-import views
+
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^article/', include('article.urls')),
+    url(r'^list/(?P<block_id>\d+)', article_list),
+    #url(r'^article/', include('article.urls')),
 	#url(r'^static/(?P<path>.*)S',django.contrib.staticfiles.views.serve),
-	url(r'^$',views.index),
+	#url(r'^$',views.index),
 ]
