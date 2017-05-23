@@ -2,12 +2,12 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="col-xs-12 col-md-12">
+ 
   <ol class="breadcrumb">
     <li><a href="/">首页</a></li>
     <li class="active">{{b.name}}</li>
   </ol>
-
-  <a herf="#" class="btn btn-primary">发表文章</a>
+  <a href="/article/detail/{{b.id}}" class="btn btn-primary">发表文章</a>
     <br />
     <br />
   <table class="table table-bordered">

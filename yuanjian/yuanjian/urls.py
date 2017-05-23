@@ -19,6 +19,7 @@ import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^article/', include('article.urls')),
+    #url(r'^article/', include('article.urls')),
 	#url(r'^static/(?P<path>.*)S',django.contrib.staticfiles.views.serve),
 	url(r'^$',views.index),
 ]

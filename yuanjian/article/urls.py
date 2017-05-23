@@ -14,10 +14,11 @@ Including another URLconf
 """
 from django.conf.urls import  url
 from .views import article_list
-
+from .views import article_detail
 
 urlpatterns = [
     url(r'^list/(?P<block_id>\d+)', article_list),
+    url(r'^detail/(?P<block_id>\d+)', article_detail),
     #url(r'^article/', include('article.urls')),
 	#url(r'^static/(?P<path>.*)S',django.contrib.staticfiles.views.serve),
 	#url(r'^$',views.index),
